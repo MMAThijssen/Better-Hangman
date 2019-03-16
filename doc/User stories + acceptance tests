@@ -1,0 +1,259 @@
+-----------------------------------
+
+STARTING THE GAME
+
+"As a user, I want to be able to start the game in an intuitive way."
+
+As anonymous user:
+When I start the application, a start screen is opened, that shows the name of the application and
+a few buttons. One of those buttons is named "Start Game". When I press it, a new interface is shown
+that includes instructions of how to play the game. The screen will also show that I am not logged
+in and have not recieved any points yet.
+
+As user with account:
+When I start the application, a start screen is opened, that shows the name of the application and
+a few buttons. One of those buttons shows the text "Log In". When I type in my username and password,
+a new screen is opened that shows a few buttons. One of them shows the text "Start Game". When I click
+it, the game interface is opened. It shows instructions on how to play the game as well as my username,
+my personal avatar and my personal score.
+
+-----------------------------------
+
+GUESSING A LETTER
+
+
+"As a user, I want to be able to guess a letter and see appropriate updates on the screen."
+
+When I enter one symbol, one of the following things happens:
+- If I enter a symbol that is not a letter (number oder extra symbol), the program tells me that
+I should put in a letter.
+- If I put in more than one letter, the program tells me to try to type in something with the same
+length as the word.
+- If I put in a letter that I have already guessed, the program tells me that I have already tried
+this letter and that I should try another one without me losing a life.
+
+If my input is only one symbol long and a letter, one of two things happen:
+- If the letter is in the word I am trying to guess, the underscores on the screens change into the
+letter that I have guessed at the position the letter is in the word. A pop sound appears.
+- If the letter is not in the word I am trying to guess, the program makes a disapproving noise and
+the letter shows up on the right side of the screen under the label "Guessed letters:".
+
+-----------------------------------
+
+GUESS WHOLE WORD AT ONCE
+
+"As a user, I want to be able to enter a whole word instead of one letter when I think I know the word."
+
+Given I entered a guess longer than one character:
+- I will receive feedback on my guess (good guess, guess is wrong length, guess contains symbols or numbers, wrong guess)
+- I will receive a double lives penalty if I guess wrong
+- I will win the game if I guess correctly
+
+-----------------------------------
+
+ENTER GUESS WITH ENTER BUTTON
+
+"As a user I want to be able to guess a letter by hitting my ‘Enter’ keyboard button."
+
+Given I have entered a guess in the entry field:
+- I will receive feedback on my guess (good guess, guess is not a letter, wrong guess)
+- If the guess is valid, it should be processed
+
+-----------------------------------
+
+LOSING
+
+"As a user, I lose the game when my lives run out."
+
+Given I have run out of lives:
+- the gallow image is complete
+- I will hear a depressing sound 
+- I get a popup message telling me I have lost
+- the pop up tells me what the word was
+- the pop up tells me my score
+-----------------------------------
+
+WINNING
+
+"As a user, I win the game when I have guessed the word."
+
+Given I have guessed the word:
+- All the correct letters are filled in in the MainFrame
+- I will hear a celebratory sound
+- I get a popup message telling me I have won
+- the popup tells me what the word was
+- the pop up tells me my score
+
+-----------------------------------
+
+ENTER GUESS WITH ENTER BUTTON
+
+"As a user I want to be able to guess a letter by hitting my ‘Enter’ keyboard button."
+
+Given I have entered a guess in the entry field:
+- I will receive feedback on my guess (good guess, guess is not a letter, wrong guess)
+- If the guess is valid, it should be processed
+
+-----------------------------------
+
+GUESS WHOLE WORD AT ONCE
+
+"As a user, I want to be able to enter a whole word instead of one letter when I think I know the word."
+
+Given I entered a guess longer than one character:
+- I will receive feedback on my guess (good guess, guess is wrong length, guess contains symbols or numbers, wrong guess)
+- I will receive a double lives penalty if I guess wrong
+- I will win the game if I guess correctly
+
+-----------------------------------
+
+CREATE ACCOUNT
+
+"As a user, I can create an account by filling in a chosen username and password (filled in twice). 
+When satisfied with my username and password, I click a button to finalize the creation of my account." 
+
+Given I entered a valid ('new') username and my duplicate passwords match:
+- I will be notified that my account creation was successful
+- I will be automatically logged in
+
+-----------------------------------
+
+LOG IN TO ACCOUNT
+
+"As a user, I can log in to my account by clicking 'log in' in the start screen. 
+I will fill in my username and password, and click the 'log in' button."
+
+Given I have entered a valid username and password combination:
+- I will be logged in to the account
+- I will receive a notification ("Welcome [username]!")
+- I will be directed to the Account menu where I can (i.e.) start the game
+
+-----------------------------------
+
+EDIT USERNAME
+
+"As a user, I can edit my username when I am logged in to my account. 
+I fill in my password and new username and click 'edit username' to finalize the changes made."
+
+Given I have entered a valid username and password:
+- I will be notified that the change was succesful
+
+-----------------------------------
+
+EDIT PASSWORD
+
+"As a user, I can edit my password when I am logged in to my account. 
+I fill in my current password and my desired password. 
+I click 'Edit password' to finalize the change."
+
+Given I have entered valid passwords:
+-I will be notified that the change was succesful
+
+-----------------------------------
+
+DELETE ACCOUNT
+
+"As a user, I can delete my account when I am logged in.
+I fill in my current password and click 'Delete account' to finalize the change."
+
+Given I have entered a valid password:
+- I will be notified that the deletion was succesful
+
+-----------------------------------
+
+EDIT AVATAR
+
+"As a user, I can edit my avatar when I am logged in.
+I move the slider to my desired avatar, and return to menu."
+
+- When I start the game, my desired avatar will be shown on the right.
+
+-----------------------------------
+
+LOG OUT OF ACCOUNT
+
+"As a user, I can log out of my account. I click on the log out button.."
+
+Given I clicked on 'log out':
+- I will be notified that I logged out
+- A label on the right will tell me I am not logged in when I start a game.
+
+-----------------------------------
+
+CHANGING THE SOUND VOLUME
+
+"As a user, I want to be able to change the volume of all the sounds and music that are being played, by the use of an in-screen method.
+The volume must stay this way until I exit the game or change it again."
+
+Given I go to the option screen:
+- The volume slider will be displayed
+- The volume slider can slide over a set of value's that make sense
+
+Given I use the volume slider:
+- The volume will change accordingly
+- I will be able to mute the sounds and music
+
+Given I have used the volume slider:
+- The volume will stay the way I set it until I change it again or until I change the game.
+
+-----------------------------------
+
+CHANGING THE GAME DIFFICULTY
+
+"As a user I want to be able to change the difficulty level of the game with the use of an in-screen method, depending on my skill level.
+The difficulty should be saved for the entire duration of the game."
+
+Given I go to the option screen:
+- The difficulty slider will be displayed
+- The difficulty slider can slide over a set of difficulty value's that make sense.
+
+Given I use the difficulty slider:
+- The difficulty level will change accordingly
+
+Given I have used the difficulty slider:
+- The difficulty will stay the way I set it until I change it again or the game is shut down.   
+
+-----------------------------------
+
+SCORE POINTS
+
+"As a user I want to be able to score points dependent on the skill level at which I completed a game and on how many lives 
+I have lost guessing the correct word. When I have guessed a word, I want to see a popup containing the amount of points I got for correctly guessing my previous word.
+Furtermore I want my total score to be displayed which should be updated when a word is correctly or incorrectly guessed.
+
+Given I correctly guess a word:
+- My score for the current word is displayed
+- My total score is updated
+
+Given the difficulty level of the game:
+- The amount of points gathered for the current word should increase when the difficulty level is increased.
+
+Given the amount of lives that are lost:
+- The amount of points gathered for the current word should decrease when the amount of lives lost increases.  
+
+Given I incorrectly guess a word:
+- A small amount of points are awarded
+- My score for the current word is displayed
+- My total score is updated
+
+As an anonymous user:
+- Only the score for the last correctly/incorrectly guessed word is displayed, no total score is updated.
+-----------------------------------
+
+VIEW HIGH SCORES
+
+"As a user I want to be able to check the highscores set by myself or other players. 
+It should be accessible by use of a button and show me the top 10 highest highscores 
+and top 10 highest accumulated scores and the players that have achieved them. It should
+be possible to return to the game after viewing them the high scores should be updated
+automatically each time I open the window."
+
+-----------------------------------
+
+BUTTONS MAKE SOUNDS
+
+"As a user I want to have an experience that is more than just visuals. I want to get audio feedback from the program.
+I want the buttons to make a sound when they are clicked to confirm that I've clicked them. The button sounds should be 
+mutable for players that do not like the buttons making sounds."
+
+-----------------------------------

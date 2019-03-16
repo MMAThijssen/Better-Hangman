@@ -1,0 +1,181 @@
+USE CASE DESCRIPTIONS
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Use case: 
+Actors: 
+Description: 
+Exceptions:
+------------------------------------------------------------------------------------------------------------------------------------- 
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Use case: Enter a letter
+
+Actors: Player
+
+Description: 
+A player has started a hangman game via the start screen.  
+A player enters a letter in the field and presses the GO-button or presses the enter bar, both result in the same processing. The letter field is cleared. 
+The letter is checked for validity. A feedback message on the guess is given above the entry guess field.
+The letter is compared to the actual word. If it is in the word, the letter will be displayed on the right place in the word. If the letter is not in the word, it is 
+displayed in a wrongly guessed letters frame, a life is subtracted and the next gallow image is shown.
+The game state is checked. If the guessed letter was correct, the winning conditions are checked. If the guessed letter was valid but not in the word, the losing conditions
+are checked. If the conditions are met, the game stops and entering another letter is not possible anymore.
+When the game is won or lossed, an pop up window appears to notify the player that the game has been won or lossed and the obtained score is shown.
+
+Exceptions: 
+The letter has already been guessed.
+The input is not a symbol of the alphabet.
+The input is multiple characters.
+No letter was entered. 
+The game is already over
+-------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Use case: Enter a word
+
+Actors: Player
+
+Description:
+A player enters a word in the field and presses the GO-button or presses the enter bar, both result in the same processing. The letter field is cleared. 
+The input word is checked for validity. If valid, the input word is compared to the actual word. If the words match, the word is displayed on the word field. If the
+words do not match, two lives are subtracted and the gallow image is updated accordingly. A feedback message on the guess is given above the entry guess field. 
+The game state is checked. If the guessed word was correct, the game has been won, the score is calculated, the game stops and entering another guess is not possible anymore. 
+If the guessed word was valid but not the correct word, the losing conditions are checked. If the conditions are met, the game is lost, the score is calculated, the game stops and entering 
+another letter is not possible anymore.
+When the game has been won or lost, an pop up window appears to notify the player that the game has been won or lost and the obtained score is shown.
+
+Exceptions:
+The word input contains symbols
+The length of the input word does not match the length of the to be guessed word
+No word was entered
+The game is already over
+-------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Use case: Start a game
+
+Actors: Player
+
+Description:
+A player presses the 'start the game' button. The game screen appears in which the user can read the instructions on how to play the game.
+On the bottom of the screen the number of letters in the word are displayed as '_' times the number of letters in the word. Below it, the player can enter a letter or the player can guess the word.
+The player can enter his guess by clicking the 'GO' button or pressing enter on his keyboard.
+When the user is logged in, on the right of the screen the user name, the total score and the user avatar are shown. If the player has not logged in to an account, on the right a message is shown, 
+that the player is not logged in to an account. After the first entered guess, the player will see that the instructions have been replaced by an image of the gallow.
+The player can restart the game by clicking the 'Restart' button and quit the game by clicking the 'Return to menu' button.
+
+Exceptions:
+The player does not click the 'start a game' button.
+-------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+Use case: Create a new account
+
+Actors: Player
+ 
+Description: 
+A player creates a new account by entering a user name and a password. The player enters the password a second time to confirm.  
+ 
+Exceptions:
+User name has already been taken.
+------------------------------------------------------------------------------------------------------------------------------------- 
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Use case: Delete account
+
+Actors: Player
+
+Description:
+A player can delete their account when the player is logged in. 
+The player has to fill in their password and press the 'delete account' button.
+The player can click 'show password' to check for typos.
+
+Exceptions:
+Password doesn't match.
+-------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Use case: Log in to account
+
+Actors: Player
+ 
+Description: 
+The player logs in to their account by entering their user name and password, and presses log in. 
+The player can click 'show password' to check for typos.
+ 
+Exceptions:
+User name not found.
+Wrong password.
+------------------------------------------------------------------------------------------------------------------------------------- 
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Use case: Edit password
+
+Actors: Player
+ 
+Description: 
+The player logs in to their account by entering their user name and password. They select 'Edit account'. 
+They select 'Edit password'. They enter their current password, and their desired new password in duplicate.
+They can click 'show password' to check for typos. They confirm 'Edit password'.
+ 
+Exceptions:
+Wrong password.
+Desired password is longer than 12 characters.
+Desired passwords don't match.
+-------------------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Use case: Edit user name
+
+Actors: Player
+ 
+Description: 
+The player logs in to their account by entering their user name and password. They select 'Edit account'. 
+They select 'Edit user name'. They enter their current password, and their desired new user name.
+They can click 'show password' to check for typos. They confirm 'Edit user name'.
+ 
+Exceptions:
+Wrong password.
+Desired user name is longer than 12 characters.
+Desired user name is already taken.
+Desired user name is an empty string.
+-------------------------------------------------------------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Use case: Edit avatar
+
+Actors: Player
+
+Description:
+The player logs into his or her account and arrives at the 'account menu'. Here the player goes to the 'Edit account' menu.
+Here the player goes to the 'Edit avatar' menu. Here the player can edit his or her avatar by using the slider and setting the
+slider to the name of the desired avatar. When the 'Return to menu' button is clicked the avatar is set to the desired
+avatar.
+
+Exceptions:
+The player does not arrive at the 'Edit avatar' menu
+The player does not click the 'Return to menu' button at the 'Edit avatar' menu
+------------------------------------------------------------------------------------------------------------------------------------- 
+
+Use case: View High scores
+
+Actors: Player
+ 
+Description:
+A player clicks the 'checks high score button' and gets shown the top 10 high scores and top 10 accumulated scores
+ 
+Exceptions:
+The user has no internet connection
+
+-------------------------------------------------------------------------------------------------------------------------------------
+Use case: Buttons make sounds
+
+Actors: Player
+
+Description: 
+When the player clicks a button, the program produces a sounds that confirms that the button has been pressed
+
+Exceptions:
+The player has muted all sounds in the option screen
